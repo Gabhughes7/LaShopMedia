@@ -2,68 +2,58 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LA SHOP MEDIA</title>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: white;
-}
-
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero img {
-  width: 150px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin: 20px 0;
-}
-
-.btn {
-  padding: 12px 24px;
-  background: orange;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.portfolio {
-  padding: 80px 10%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.portfolio div {
-  background: #1a1a1a;
-  height: 200px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<section class="hero">
+<nav>
   <img src="logo.png" alt="logo">
-  <h1>LA SHOP MEDIA</h1>
-  <p>Création de contenu visuel qui capte l’attention</p>
-  <a href="#portfolio" class="btn">Voir le portfolio</a>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="hero fade-in">
+  <h1>LA SHOP <span style="color:#ff8c00;">MEDIA</span></h1>
+  <p>Création de contenu visuel cinématique, branding et storytelling pour marques modernes.</p>
+  <a class="btn" href="services.html">Découvrir</a>
 </section>
 
-<section id="portfolio" class="portfolio">
-  <div></div>
-  <div></div>
-  <div></div>
+<section class="section fade-in">
+  <h2>Portfolio</h2>
+
+  <div class="grid fade-in">
+    <div class="card">Projet 1</div>
+    <div class="card">Projet 2</div>
+    <div class="card">Projet 3</div>
+    <div class="card">Projet 4</div>
+    <div class="card">Projet 5</div>
+    <div class="card">Projet 6</div>
+  </div>
 </section>
+
+<footer>
+  © 2026 LA SHOP MEDIA
+</footer>
+
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
