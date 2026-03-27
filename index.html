@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LA SHOP MEDIA</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaShop Media</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-  <img src="logo.png" alt="logo">
-  <div class="links">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <div class="logo-small">
+      <img src="logo.png" alt="logo">
+    </div>
 
-<section class="hero fade-in">
-  <h1>LA SHOP <span style="color:#ff8c00;">MEDIA</span></h1>
-  <p>Création de contenu visuel cinématique, branding et storytelling pour marques modernes.</p>
-  <a class="btn" href="services.html">Découvrir</a>
-</section>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </div>
+  </nav>
 
-<section class="section fade-in">
-  <h2>Portfolio</h2>
+  <!-- HERO -->
+  <section class="hero">
 
-  <div class="grid fade-in">
-    <div class="card">Projet 1</div>
-    <div class="card">Projet 2</div>
-    <div class="card">Projet 3</div>
-    <div class="card">Projet 4</div>
-    <div class="card">Projet 5</div>
-    <div class="card">Projet 6</div>
-  </div>
-</section>
+    <div class="hero-center">
 
-<footer>
-  © 2026 LA SHOP MEDIA
-</footer>
+      <img src="logo.png" class="hero-logo" alt="logo">
 
-<script>
-const elements = document.querySelectorAll('.fade-in');
+      <h1>LA SHOP MEDIA</h1>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
+      <p>Création de contenu • Branding • Production visuelle</p>
 
-elements.forEach(el => observer.observe(el));
-</script>
+      <a href="Services.html" class="btn">Voir nos services</a>
+
+    </div>
+
+  </section>
 
 </body>
 </html>
