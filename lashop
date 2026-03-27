@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>LA SHOP MEDIA</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero img {
+  width: 150px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: orange;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio {
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio div {
+  background: #1a1a1a;
+  height: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <img src="logo.png" alt="logo">
+  <h1>LA SHOP MEDIA</h1>
+  <p>Création de contenu visuel qui capte l’attention</p>
+  <a href="#portfolio" class="btn">Voir le portfolio</a>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <div></div>
+  <div></div>
+  <div></div>
+</section>
+
+</body>
+</html>
