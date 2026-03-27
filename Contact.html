@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<nav>
+  <img src="logo.png" alt="logo">
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section fade-in">
+  <h1>Contact</h1>
+
+  <div class="card">
+    <p><strong>Gabriel Hughes</strong></p>
+    <p>📞 343-204-4604</p>
+    <p>✉️ gabrielhughes4604@gmail.com</p>
+  </div>
+</section>
+
+<script>
+const elements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+});
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
